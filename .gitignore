@@ -1,2 +1,4 @@
 # Dont track content of this folders
 .history
+node_modules
+dist
