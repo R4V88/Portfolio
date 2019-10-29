@@ -11,14 +11,28 @@ html {
 }
 
 body {
-  width: 1200px;
-  margin:0 auto ;
-}
-
-.wrapper {
-  width: 1200;
-}
-
-video {
+  max-width: 1200px;
   width: 100%;
+  margin:0 auto;
+  
+}
+
+.bodycontentwrapper{
+  background: #E8E8E8;
+}
+
+.topvideo {
+  width: 100%;
+}
+
+.navigation {
+  background: #A69888;
+  &__list {
+    width: 100%;
+    &--item {
+      color: #403831;
+      display:inline-block;
+      font-size: 34px;
+    }
+  }
 }
