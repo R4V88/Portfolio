@@ -18,24 +18,30 @@ html {
 }
 
 .contentwrapper {
-  max-width: 1200px;
+  max-width: $maxwidth;
   margin: 0 auto;
 }
 
 .navigation {
-  background: #a69888;
   position: fixed;
-  max-width: 1200px;
+  max-width: $maxwidth;
   width: 100%;
   top: 0;
   border-radius: 5px;
+  background-color: #0c5215;
+  background-image: linear-gradient(0deg, #0c5215 0%, #ffffff 39%);
   &__list {
     display: flex;
     justify-content: space-around;
+    list-style: none;
     padding: 0;
     &--item {
-      display: inline-block;
-      font-size: 20px;
+      &--link {
+        @include linkstyle;
+        font-family: "Playfair Display", serif;
+        text-transform: uppercase;
+        color: #0c5215;
+      }
     }
   }
 }
