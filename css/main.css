@@ -315,24 +315,28 @@ html {
   -webkit-box-sizing: inherit;
           box-sizing: inherit; }
 
-body {
-  max-width: 1200px;
+.topvideo {
   width: 100%;
+  position: relative;
+  top: -200px; }
+
+.contentwrapper {
+  max-width: 1200px;
   margin: 0 auto; }
 
-.bodycontentwrapper {
-  background: #E8E8E8; }
-
-.topvideo {
-  width: 100%; }
-
 .navigation {
-  background: #A69888; }
-  .navigation__list {
-    width: 100%; }
-    .navigation__list--item {
-      color: #403831;
-      display: inline-block;
-      font-size: 34px; }
+  background: #A69888;
+  position: fixed;
+  width: 100%;
+  top: 0; }
+  .navigation__list--item {
+    color: #403831;
+    display: inline-block;
+    font-size: 34px; }
+
+.maincontent {
+  position: relative;
+  top: -200;
+  background: #E8E8E8; }
 
 /*# sourceMappingURL=main.css.map */
