@@ -1,12 +1,13 @@
 @import "_normalize";
 @import "_variables";
 
-
 html {
   box-sizing: border-box;
 }
 
-*, *:before, *:after {
+*,
+*:before,
+*:after {
   box-sizing: inherit;
 }
 
@@ -14,25 +15,27 @@ html {
   width: 100%;
   position: relative;
   top: -200px;
-
 }
 
 .contentwrapper {
   max-width: 1200px;
-  margin:0 auto;
+  margin: 0 auto;
 }
 
 .navigation {
-  background: #A69888;
+  background: #a69888;
   position: fixed;
+  max-width: 1200px;
   width: 100%;
   top: 0;
+  border-radius: 5px;
   &__list {
-
+    display: flex;
+    justify-content: space-around;
+    padding: 0;
     &--item {
-      color: #403831;
-      display:inline-block;
-      font-size: 34px;
+      display: inline-block;
+      font-size: 20px;
     }
   }
 }
@@ -40,5 +43,4 @@ html {
 .maincontent {
   position: relative;
   top: -200;
-  background: #E8E8E8;
 }
