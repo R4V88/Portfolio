@@ -10,15 +10,35 @@ html {
   box-sizing: inherit;
 }
 
-body {
-  width: 1200px;
-  margin:0 auto ;
-}
-
-.wrapper {
-  width: 1200;
-}
-
-video {
+.topvideo {
   width: 100%;
+  position: relative;
+  top: -200px;
+
+}
+
+.contentwrapper {
+  max-width: 1200px;
+  margin:0 auto;
+}
+
+.navigation {
+  background: #A69888;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  &__list {
+
+    &--item {
+      color: #403831;
+      display:inline-block;
+      font-size: 34px;
+    }
+  }
+}
+
+.maincontent {
+  position: relative;
+  top: -200;
+  background: #E8E8E8;
 }
