@@ -323,26 +323,34 @@ html {
   top: -200px; }
 
 .contentwrapper {
-  max-width: 1200px;
+  max-width: 1000px;
   margin: 0 auto; }
 
 .navigation {
-  background: #a69888;
   position: fixed;
-  max-width: 1200px;
+  max-width: 1000px;
   width: 100%;
   top: 0;
-  border-radius: 5px; }
+  border-radius: 5px;
+  background-color: #0c5215;
+  background-image: -webkit-gradient(linear, left bottom, left top, from(#0c5215), color-stop(39%, #ffffff));
+  background-image: -o-linear-gradient(bottom, #0c5215 0%, #ffffff 39%);
+  background-image: linear-gradient(0deg, #0c5215 0%, #ffffff 39%); }
   .navigation__list {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
     -ms-flex-pack: distribute;
         justify-content: space-around;
+    list-style: none;
     padding: 0; }
-    .navigation__list--item {
-      display: inline-block;
-      font-size: 20px; }
+    .navigation__list--item--link {
+      text-decoration: none;
+      letter-spacing: 3px;
+      font-size: 20px;
+      font-family: "Playfair Display", serif;
+      text-transform: uppercase;
+      color: #0c5215; }
 
 .maincontent {
   position: relative;
