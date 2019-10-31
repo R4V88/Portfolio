@@ -11,10 +11,16 @@ html {
   box-sizing: inherit;
 }
 
+.wrapper {
+  height: 60vh;
+  overflow: hidden;
+}
+
 .topvideo {
-  width: 100%;
   position: relative;
-  top: -200px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 100vw;
 }
 
 .contentwrapper {
@@ -46,7 +52,7 @@ html {
     &--item {
       &--link {
         @include linkstyle;
-        font-family: "Playfair Display", serif;
+        font-family: 'Montserrat', sans-serif;
         text-transform: uppercase;
         color: #0c5215;
       }
@@ -55,7 +61,7 @@ html {
 }
 
 .maincontent {
-  position: relative;
-  top: -200;
   font-family: 'Yanone Kaffeesatz', sans-serif;
 }
+
+
