@@ -33,35 +33,35 @@ html {
   align-items: center;
   justify-content: center;
   position: fixed;
-  max-width: $maxwidth;
+  // max-width: $maxwidth;
   max-height: 36px;
   height: 100%;
   width: 100%;
   top: 0;
+  left: 0;
   z-index: 200;
   border-radius: 5px;
-  background-color: #0c5215;
-  background-image: linear-gradient(0deg, #0c5215 0%, #ffffff 39%);
+  background-color: #ffffff;
+  background-image: linear-gradient(180deg, #ffffff 1%, #d6ffea 100%);
+
   &__list {
     display: flex;
-    width: 100%;
+    width: 1000;
     justify-content: space-around;
     list-style: none;
     padding: 0;
-    margin: 0;
+    margin: 0 auto;
     &--item {
       &--link {
         @include linkstyle;
-        font-family: 'Montserrat', sans-serif;
+        font-family: "Montserrat", sans-serif;
         text-transform: uppercase;
-        color: #0c5215;
+        color: black;
       }
     }
   }
 }
 
 .maincontent {
-  font-family: 'Yanone Kaffeesatz', sans-serif;
+  font-family: "Yanone Kaffeesatz", sans-serif;
 }
-
-
