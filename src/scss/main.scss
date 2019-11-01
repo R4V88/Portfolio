@@ -65,3 +65,23 @@ html {
 .maincontent {
   font-family: "Yanone Kaffeesatz", sans-serif;
 }
+
+.mainfooter {
+  width: 100%;
+  padding-bottom: 50px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  &__title {
+    font-weight: bold;
+    font-family: "Yanone Kaffeesatz", sans-serif;
+    &--par {
+    }
+  }
+  &__logo {
+    display: flex;
+    width: 600px;
+    justify-content: space-between;
+  }
+}
