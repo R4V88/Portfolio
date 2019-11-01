@@ -9,3 +9,8 @@ $maxwidth: 1000px;
   height: 50px;
   width: 60px;
 }
+
+@mixin navlogosize{
+  padding: 5px 5px;
+  height: 100%; 
+}
