@@ -11,16 +11,16 @@ html {
   box-sizing: inherit;
 }
 
-.wrapper {
+/****** Top Video Style ******/
+.topwrapper {
   height: 50vh;
   overflow: hidden;
-}
-
-.topvideo {
-  position: relative;
-  top: 50%;
-  transform: translateY(-50%);
-  width: 100vw;
+  &__video {
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 100vw;
+  }
 }
 
 .contentwrapper {
@@ -28,6 +28,7 @@ html {
   margin: 0 auto;
 }
 
+/****** Navigation ******/
 .navigation {
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -44,6 +45,7 @@ html {
   &__title {
     display: flex;
     align-items: center;
+    justify-content: flex-start;
     &--par {
       font-family: "Montserrat", sans-serif;
       font-weight: normal;
@@ -54,42 +56,43 @@ html {
   }
   &__logo {
     display: flex;
-    justify-content: flex-end;
+    justify-content: center;
+    flex-direction: column-reverse;
+    width: 100%;
     &__container {
-      width: 300px;
-      height: 100%;
       display: flex;
-      justify-content: space-between;
+      flex-direction: row-reverse;
+      max-width:400px;
+      width: 200%;
+      display: flex;
+      jus: flex-end;
       &--mini {
         @include navlogosize;
       }
     }
   }
-
-  // &__list {
-  //   display: flex;
-  //   width: 1000;
-  //   justify-content: space-around;
-  //   list-style: none;
-  //   padding: 0;
-  //   margin: 0 auto;
-  //   &--item {
-  //     &--link {
-  //       @include linkstyle;
-  //       font-family: "Montserrat", sans-serif;
-  //       text-transform: uppercase;
-  //       color: black;
-  //     }
-  //   }
-  // }
 }
 
 .maincontent {
+  display: grid;
+  grid-template-columns: 100%;
+  grid-template-rows: 40vh 10vh 40vh 10vh 40vh 10vh 20vh 10vh 70vh;
   font-family: "Yanone Kaffeesatz", sans-serif;
 }
 
-.aboutme {
+.scroll {
   display: flex;
+  justify-content: center;
+  &__down {
+    @include scrolldownsize;
+  }
+}
+
+.aboutme {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 50vh;
+
   flex-direction: row;
   padding-bottom: 50px;
   &__container {

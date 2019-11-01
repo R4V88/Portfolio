@@ -14,3 +14,8 @@ $maxwidth: 1000px;
   padding: 5px 5px;
   height: 100%; 
 }
+
+@mixin scrolldownsize{
+  height: 50px;
+  width: 80px;
+}
