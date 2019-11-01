@@ -66,6 +66,43 @@ html {
   font-family: "Yanone Kaffeesatz", sans-serif;
 }
 
+.techlogo {
+  @include logosize;
+}
+
+.tech {
+  display: flex;
+  align-items: center;
+
+  &__name {
+    padding-right: 100px;
+  }
+}
+
+.techgrid {
+  display: grid;
+  width: 100%;
+  grid-template-columns: repeat(5, 1fr);
+  grid-template-rows: repeat(5, 1fr);
+  grid-column-gap: 10px;
+  grid-row-gap: 10px;
+  &__item {
+    width: 100%;
+  }
+  &__posleft {
+    display: flex;
+    justify-content: flex-start;
+  }
+  &__poscenter {
+    display: flex;
+    justify-content: center;
+  }
+  &__posright {
+    display: flex;
+    justify-content: flex-end;
+  }
+}
+
 .mainfooter {
   width: 100%;
   padding-bottom: 50px;
