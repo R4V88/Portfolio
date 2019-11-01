@@ -391,7 +391,9 @@ html {
       max-width: 400px;
       width: 200%;
       display: flex;
-      jus: flex-end; }
+      -webkit-box-pack: end;
+          -ms-flex-pack: end;
+              justify-content: flex-end; }
       .navigation__logo__container--mini {
         padding: 5px 5px;
         height: 100%; }
