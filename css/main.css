@@ -372,28 +372,18 @@ html {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: reverse;
-        -ms-flex-direction: column-reverse;
-            flex-direction: column-reverse;
+    -webkit-box-pack: end;
+        -ms-flex-pack: end;
+            justify-content: flex-end;
     width: 100%; }
     .navigation__logo__container {
       display: -webkit-box;
       display: -ms-flexbox;
       display: flex;
-      -webkit-box-orient: horizontal;
-      -webkit-box-direction: reverse;
-          -ms-flex-direction: row-reverse;
-              flex-direction: row-reverse;
-      max-width: 400px;
-      width: 200%;
-      display: flex;
-      -webkit-box-pack: end;
-          -ms-flex-pack: end;
-              justify-content: flex-end; }
+      width: 100px;
+      -ms-flex-pack: distribute;
+          justify-content: space-around;
+      padding-right: 15px; }
       .navigation__logo__container--mini {
         padding: 5px 5px;
         height: 100%; }
@@ -403,9 +393,10 @@ html {
   display: grid;
   -ms-grid-columns: 100%;
   grid-template-columns: 100%;
-  -ms-grid-rows: 40vh 10vh 40vh 10vh 40vh 10vh 20vh 10vh 70vh;
-  grid-template-rows: 40vh 10vh 40vh 10vh 40vh 10vh 20vh 10vh 70vh;
-  font-family: "Yanone Kaffeesatz", sans-serif; }
+  -ms-grid-rows: 40vh 10vh 50vh 10vh 40vh 10vh 20vh 10vh 70vh;
+  grid-template-rows: 40vh 10vh 50vh 10vh 40vh 10vh 20vh 10vh 70vh;
+  font-family: "Yanone Kaffeesatz", sans-serif;
+  grid-row-gap: 20px; }
 
 .scroll {
   display: -webkit-box;
@@ -413,7 +404,10 @@ html {
   display: flex;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
-          justify-content: center; }
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center; }
   .scroll__down {
     height: 50px;
     width: 80px; }
@@ -423,35 +417,74 @@ html {
   display: grid;
   -ms-grid-columns: 1fr 1fr;
   grid-template-columns: 1fr 1fr;
+  grid-column-gap: 10px;
   -ms-grid-rows: 50vh;
   grid-template-rows: 50vh;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
-  padding-bottom: 50px; }
+  height: 100%; }
   .aboutme__container {
-    width: 50px;
-    background-color: #797b84;
-    border-radius: 30px; }
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center; }
     .aboutme__container--photo {
+      background-color: #f4d03f;
+      background-image: -o-linear-gradient(318deg, #f4d03f 0%, #16a085 100%);
+      background-image: linear-gradient(132deg, #f4d03f 0%, #16a085 100%);
       width: 200px;
       height: 250px;
-      border-radius: 30px; }
+      border-radius: 100px; }
+  .aboutme__content {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column; }
+    .aboutme__content--h {
+      color: green;
+      letter-spacing: 2px; }
+    .aboutme__content--p {
+      font-weight: bold;
+      font-size: 24px;
+      letter-spacing: 2px; }
 
 .techlogo {
   height: 50px;
   width: 60px; }
 
 .tech {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center; }
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr;
+  grid-template-columns: 1fr;
+  -ms-grid-rows: 1fr 1fr;
+  grid-template-rows: 1fr 1fr; }
   .tech__name {
-    padding-right: 100px; }
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    text-transform: uppercase;
+    letter-spacing: 5px;
+    color: green;
+    margin: 0; }
 
 .techgrid {
   display: -ms-grid;
@@ -486,6 +519,72 @@ html {
     -webkit-box-pack: end;
         -ms-flex-pack: end;
             justify-content: flex-end; }
+
+.edu {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr;
+  grid-template-columns: 1fr;
+  -ms-grid-rows: 1fr 1fr;
+  grid-template-rows: 1fr 1fr; }
+  .edu__name {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    text-transform: uppercase;
+    letter-spacing: 5px;
+    color: green;
+    margin: 0; }
+
+.exp {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr;
+  grid-template-columns: 1fr;
+  -ms-grid-rows: 1fr 1fr;
+  grid-template-rows: 1fr 1fr; }
+  .exp__name {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    text-transform: uppercase;
+    letter-spacing: 5px;
+    color: green;
+    margin: 0; }
+
+.projects {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr;
+  grid-template-columns: 1fr;
+  -ms-grid-rows: 1fr 1fr;
+  grid-template-rows: 1fr 1fr; }
+  .projects__name {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    text-transform: uppercase;
+    letter-spacing: 5px;
+    color: green;
+    margin: 0; }
 
 .mainfooter {
   width: 100%;
