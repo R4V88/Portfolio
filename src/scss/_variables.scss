@@ -10,12 +10,28 @@ $maxwidth: 1000px;
   width: 60px;
 }
 
-@mixin navlogosize{
+@mixin navlogosize {
   padding: 5px 5px;
-  height: 100%; 
+  height: 100%;
 }
 
-@mixin scrolldownsize{
+@mixin scrolldownsize {
   height: 50px;
   width: 80px;
+}
+
+@mixin sectionname {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-transform: uppercase;
+  letter-spacing: 5px;
+  color: green;
+  margin: 0;
+}
+
+@mixin sectiongrid {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr 1fr;
 }

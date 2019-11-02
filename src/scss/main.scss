@@ -56,16 +56,13 @@ html {
   }
   &__logo {
     display: flex;
-    justify-content: center;
-    flex-direction: column-reverse;
+    justify-content: flex-end;
     width: 100%;
     &__container {
       display: flex;
-      flex-direction: row-reverse;
-      max-width:400px;
-      width: 200%;
-      display: flex;
-      justify-content: flex-end;
+      width: 100px;
+      justify-content: space-around;
+      padding-right: 15px;
       &--mini {
         @include navlogosize;
       }
@@ -76,13 +73,15 @@ html {
 .maincontent {
   display: grid;
   grid-template-columns: 100%;
-  grid-template-rows: 40vh 10vh 40vh 10vh 40vh 10vh 20vh 10vh 70vh;
+  grid-template-rows: 40vh 10vh 50vh 10vh 40vh 10vh 20vh 10vh 70vh;
   font-family: "Yanone Kaffeesatz", sans-serif;
+  grid-row-gap: 20px;
 }
 
 .scroll {
   display: flex;
   justify-content: center;
+  align-items: center;
   &__down {
     @include scrolldownsize;
   }
@@ -91,18 +90,34 @@ html {
 .aboutme {
   display: grid;
   grid-template-columns: 1fr 1fr;
+  grid-column-gap: 10px;
   grid-template-rows: 50vh;
-
-  flex-direction: row;
-  padding-bottom: 50px;
+  height: 100%;
   &__container {
-    width: 50px;
-    background-color: #797b84;
-    border-radius: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     &--photo {
+      background-color: #f4d03f;
+      background-image: linear-gradient(132deg, #f4d03f 0%, #16a085 100%);
       width: 200px;
       height: 250px;
-      border-radius: 30px;
+      border-radius: 100px;
+    }
+  }
+  &__content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    &--h {
+      color: green;
+      letter-spacing: 2px;
+    }
+    &--p {
+      font-weight: bold;
+      font-size: 24px;
+      letter-spacing: 2px;
     }
   }
 }
@@ -112,11 +127,9 @@ html {
 }
 
 .tech {
-  display: flex;
-  align-items: center;
-
+  @include sectiongrid;
   &__name {
-    padding-right: 100px;
+    @include sectionname;
   }
 }
 
@@ -141,6 +154,27 @@ html {
   &__posright {
     display: flex;
     justify-content: flex-end;
+  }
+}
+
+.edu {
+  @include sectiongrid;
+  &__name {
+    @include sectionname;
+  }
+}
+
+.exp {
+  @include sectiongrid;
+  &__name {
+    @include sectionname;
+  }
+}
+
+.projects {
+  @include sectiongrid;
+  &__name {
+    @include sectionname;
   }
 }
 
