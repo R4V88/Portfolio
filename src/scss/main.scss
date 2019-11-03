@@ -2,6 +2,15 @@
 @import "_variables";
 @import "_mixins";
 
+@keyframes picturechange {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
 html {
   box-sizing: border-box;
 }
@@ -41,14 +50,15 @@ html {
   left: 0;
   z-index: 200;
   border-radius: 5px;
-  background-color: #ffffff;
-  background-image: linear-gradient(180deg, #ffffff 1%, #d6ffea 100%);
+  background-color: $navigationbackground;
+  background-image: $navigationimage;
+  animation: navigationbar 3s ease-in;
   &__title {
     display: flex;
     align-items: center;
     justify-content: flex-start;
     &--paragraph {
-      font-family: "Montserrat", sans-serif;
+      font-family: $navigationfont;
       font-weight: normal;
       font-size: 20px;
       margin: 0;
@@ -66,6 +76,12 @@ html {
       justify-content: space-around;
       &--mini {
         @include navlogosize;
+        opacity: 0.9;
+        transition: opacity 0.3s ease-in;
+        &:hover {
+          opacity: 1;
+          border: .5px solid green;
+        }
       }
     }
   }
@@ -75,7 +91,7 @@ html {
   display: grid;
   grid-template-columns: 100%;
   grid-template-rows: 40vh 10vh 50vh 10vh 40vh 10vh 20vh 10vh 70vh;
-  font-family: "Yanone Kaffeesatz", sans-serif;
+  font-family: $mainfont;
   grid-row-gap: 20px;
 }
 
@@ -99,11 +115,12 @@ html {
     justify-content: center;
     align-items: center;
     &--photo {
-      background-color: #f4d03f;
-      background-image: linear-gradient(132deg, #f4d03f 0%, #16a085 100%);
+      background-color: $photobackground;
+      background-image: $photoimage;
       width: 200px;
       height: 250px;
       border-radius: 100px;
+      animation: picturechange 3s ease-in;
     }
   }
   &__content {
@@ -112,7 +129,7 @@ html {
     align-items: center;
     flex-direction: column;
     &--h {
-      color: green;
+      color: $justgreen;
       letter-spacing: 2px;
     }
     &--p {
@@ -125,7 +142,7 @@ html {
 
 .techlogo {
   @include logosize;
-  transition: transform .3s linear;
+  transition: transform 0.3s linear;
   &:hover {
     transform: rotate(16deg) scale(2);
   }
@@ -192,7 +209,7 @@ html {
   justify-content: center;
   &__title {
     font-weight: bold;
-    font-family: "Yanone Kaffeesatz", sans-serif;
+    font-family: $mainfont;
     &--par {
     }
   }
