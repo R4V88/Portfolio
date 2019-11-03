@@ -1,5 +1,6 @@
 @import "_normalize";
 @import "_variables";
+@import "_mixins";
 
 html {
   box-sizing: border-box;
@@ -46,7 +47,7 @@ html {
     display: flex;
     align-items: center;
     justify-content: flex-start;
-    &--par {
+    &--paragraph {
       font-family: "Montserrat", sans-serif;
       font-weight: normal;
       font-size: 20px;
@@ -58,11 +59,11 @@ html {
     display: flex;
     justify-content: flex-end;
     width: 100%;
+    padding-right: 15px;
     &__container {
       display: flex;
       width: 100px;
       justify-content: space-around;
-      padding-right: 15px;
       &--mini {
         @include navlogosize;
       }
@@ -124,6 +125,10 @@ html {
 
 .techlogo {
   @include logosize;
+  transition: transform .3s linear;
+  &:hover {
+    transform: rotate(16deg) scale(2);
+  }
 }
 
 .tech {
