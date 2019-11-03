@@ -307,6 +307,18 @@ template {
 [hidden] {
   display: none; }
 
+@-webkit-keyframes picturechange {
+  0% {
+    opacity: 0; }
+  100% {
+    opacity: 1; } }
+
+@keyframes picturechange {
+  0% {
+    opacity: 0; }
+  100% {
+    opacity: 1; } }
+
 html {
   -webkit-box-sizing: border-box;
           box-sizing: border-box; }
@@ -351,7 +363,9 @@ html {
   background-color: #ffffff;
   background-image: -webkit-gradient(linear, left top, left bottom, color-stop(1%, #ffffff), to(#d6ffea));
   background-image: -o-linear-gradient(top, #ffffff 1%, #d6ffea 100%);
-  background-image: linear-gradient(180deg, #ffffff 1%, #d6ffea 100%); }
+  background-image: linear-gradient(180deg, #ffffff 1%, #d6ffea 100%);
+  -webkit-animation: navigationbar 3s ease-in;
+          animation: navigationbar 3s ease-in; }
   .navigation__title {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -386,7 +400,14 @@ html {
           justify-content: space-around; }
       .navigation__logo__container--mini {
         padding: 5px 5px;
-        height: 100%; }
+        height: 100%;
+        opacity: 0.9;
+        -webkit-transition: opacity 0.3s ease-in;
+        -o-transition: opacity 0.3s ease-in;
+        transition: opacity 0.3s ease-in; }
+        .navigation__logo__container--mini:hover {
+          opacity: 1;
+          border: .5px solid green; }
 
 .maincontent {
   display: -ms-grid;
@@ -437,7 +458,9 @@ html {
       background-image: linear-gradient(132deg, #f4d03f 0%, #16a085 100%);
       width: 200px;
       height: 250px;
-      border-radius: 100px; }
+      border-radius: 100px;
+      -webkit-animation: picturechange 3s ease-in;
+              animation: picturechange 3s ease-in; }
   .aboutme__content {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -463,11 +486,11 @@ html {
 .techlogo {
   height: 50px;
   width: 60px;
-  -webkit-transition: -webkit-transform .3s linear;
-  transition: -webkit-transform .3s linear;
-  -o-transition: transform .3s linear;
-  transition: transform .3s linear;
-  transition: transform .3s linear, -webkit-transform .3s linear; }
+  -webkit-transition: -webkit-transform 0.3s linear;
+  transition: -webkit-transform 0.3s linear;
+  -o-transition: transform 0.3s linear;
+  transition: transform 0.3s linear;
+  transition: transform 0.3s linear, -webkit-transform 0.3s linear; }
   .techlogo:hover {
     -webkit-transform: rotate(16deg) scale(2);
         -ms-transform: rotate(16deg) scale(2);
@@ -550,6 +573,23 @@ html {
     letter-spacing: 5px;
     color: green;
     margin: 0; }
+  .edu__content {
+    height: 30vh; }
+    .edu__content--h {
+      font-size: 30px; }
+    .edu__content--paragraph {
+      margin: 0;
+      width: 100%;
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-align: center;
+          -ms-flex-align: center;
+              align-items: center;
+      font-size: 24px;
+      -webkit-box-pack: start;
+          -ms-flex-pack: start;
+              justify-content: flex-start; }
 
 .exp {
   display: -ms-grid;
@@ -572,6 +612,23 @@ html {
     letter-spacing: 5px;
     color: green;
     margin: 0; }
+  .exp__content {
+    height: 30vh; }
+    .exp__content--h {
+      font-size: 30px; }
+    .exp__content--paragraph {
+      margin: 0;
+      width: 100%;
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-align: center;
+          -ms-flex-align: center;
+              align-items: center;
+      font-size: 24px;
+      -webkit-box-pack: start;
+          -ms-flex-pack: start;
+              justify-content: flex-start; }
 
 .projects {
   display: -ms-grid;
@@ -594,6 +651,10 @@ html {
     letter-spacing: 5px;
     color: green;
     margin: 0; }
+  .projects__content {
+    height: 30vh; }
+    .projects__content--h {
+      font-size: 30px; }
 
 .mainfooter {
   width: 100%;
@@ -610,17 +671,7 @@ html {
           align-items: center;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
-          justify-content: center; }
-  .mainfooter__title {
-    font-weight: bold;
-    font-family: "Yanone Kaffeesatz", sans-serif; }
-  .mainfooter__logo {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    width: 600px;
-    -webkit-box-pack: justify;
-        -ms-flex-pack: justify;
-            justify-content: space-between; }
+          justify-content: center;
+  font-size: 8px; }
 
 /*# sourceMappingURL=main.css.map */
