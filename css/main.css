@@ -389,16 +389,18 @@ html {
     -webkit-box-pack: end;
         -ms-flex-pack: end;
             justify-content: flex-end;
-    width: 100%;
-    padding-right: 15px; }
+    width: 100%; }
     .navigation__logo__container {
       display: -webkit-box;
       display: -ms-flexbox;
       display: flex;
       width: 100px;
       -ms-flex-pack: distribute;
-          justify-content: space-around; }
+          justify-content: space-around;
+      margin-right: 15px; }
       .navigation__logo__container--mini {
+        -webkit-box-sizing: border-box;
+                box-sizing: border-box;
         padding: 5px 5px;
         height: 100%;
         opacity: 0.9;
@@ -407,7 +409,7 @@ html {
         transition: opacity 0.3s ease-in; }
         .navigation__logo__container--mini:hover {
           opacity: 1;
-          border: .5px solid green; }
+          border: 0.5px solid green; }
 
 .maincontent {
   display: -ms-grid;
