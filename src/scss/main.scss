@@ -184,12 +184,40 @@ html {
   &__name {
     @include sectionname;
   }
+  &__content{
+    height: 30vh;
+    &--h{
+      font-size: 30px;
+    }
+    &--paragraph{
+      margin: 0;
+      width: 100%;
+      display: flex;
+      align-items: center;
+      font-size: 24px;
+      justify-content: flex-start;
+    }
+  }
 }
 
 .exp {
   @include sectiongrid;
   &__name {
     @include sectionname;
+  }
+  &__content{
+    height: 30vh;
+    &--h{
+      font-size: 30px;
+    }
+    &--paragraph{
+      margin: 0;
+      width: 100%;
+      display: flex;
+      align-items: center;
+      font-size: 24px;
+      justify-content: flex-start;
+    }
   }
 }
 
@@ -198,8 +226,13 @@ html {
   &__name {
     @include sectionname;
   }
+  &__content{
+    height: 30vh;
+    &--h{
+      font-size: 30px;
+    }
 }
-
+}
 .mainfooter {
   width: 100%;
   padding-bottom: 50px;
@@ -207,15 +240,5 @@ html {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  &__title {
-    font-weight: bold;
-    font-family: $mainfont;
-    &--par {
-    }
-  }
-  &__logo {
-    display: flex;
-    width: 600px;
-    justify-content: space-between;
-  }
+  font-size: 8px;
 }
