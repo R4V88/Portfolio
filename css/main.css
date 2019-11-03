@@ -362,7 +362,7 @@ html {
     -webkit-box-pack: start;
         -ms-flex-pack: start;
             justify-content: flex-start; }
-    .navigation__title--par {
+    .navigation__title--paragraph {
       font-family: "Montserrat", sans-serif;
       font-weight: normal;
       font-size: 20px;
@@ -375,15 +375,15 @@ html {
     -webkit-box-pack: end;
         -ms-flex-pack: end;
             justify-content: flex-end;
-    width: 100%; }
+    width: 100%;
+    padding-right: 15px; }
     .navigation__logo__container {
       display: -webkit-box;
       display: -ms-flexbox;
       display: flex;
       width: 100px;
       -ms-flex-pack: distribute;
-          justify-content: space-around;
-      padding-right: 15px; }
+          justify-content: space-around; }
       .navigation__logo__container--mini {
         padding: 5px 5px;
         height: 100%; }
@@ -462,7 +462,16 @@ html {
 
 .techlogo {
   height: 50px;
-  width: 60px; }
+  width: 60px;
+  -webkit-transition: -webkit-transform .3s linear;
+  transition: -webkit-transform .3s linear;
+  -o-transition: transform .3s linear;
+  transition: transform .3s linear;
+  transition: transform .3s linear, -webkit-transform .3s linear; }
+  .techlogo:hover {
+    -webkit-transform: rotate(16deg) scale(2);
+        -ms-transform: rotate(16deg) scale(2);
+            transform: rotate(16deg) scale(2); }
 
 .tech {
   display: -ms-grid;
