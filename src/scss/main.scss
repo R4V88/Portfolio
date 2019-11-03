@@ -69,18 +69,19 @@ html {
     display: flex;
     justify-content: flex-end;
     width: 100%;
-    padding-right: 15px;
     &__container {
       display: flex;
       width: 100px;
       justify-content: space-around;
+      margin-right: 15px;
       &--mini {
+        box-sizing: border-box;
         @include navlogosize;
         opacity: 0.9;
         transition: opacity 0.3s ease-in;
         &:hover {
           opacity: 1;
-          border: .5px solid green;
+          border: 0.5px solid green;
         }
       }
     }
@@ -184,12 +185,12 @@ html {
   &__name {
     @include sectionname;
   }
-  &__content{
+  &__content {
     height: 30vh;
-    &--h{
+    &--h {
       font-size: 30px;
     }
-    &--paragraph{
+    &--paragraph {
       margin: 0;
       width: 100%;
       display: flex;
@@ -205,12 +206,12 @@ html {
   &__name {
     @include sectionname;
   }
-  &__content{
+  &__content {
     height: 30vh;
-    &--h{
+    &--h {
       font-size: 30px;
     }
-    &--paragraph{
+    &--paragraph {
       margin: 0;
       width: 100%;
       display: flex;
@@ -226,12 +227,12 @@ html {
   &__name {
     @include sectionname;
   }
-  &__content{
+  &__content {
     height: 30vh;
-    &--h{
+    &--h {
       font-size: 30px;
     }
-}
+  }
 }
 .mainfooter {
   width: 100%;
