@@ -416,8 +416,8 @@ html {
   display: grid;
   -ms-grid-columns: 100%;
   grid-template-columns: 100%;
-  -ms-grid-rows: 40vh 10vh 50vh 10vh 40vh 10vh 20vh 10vh 70vh;
-  grid-template-rows: 40vh 10vh 50vh 10vh 40vh 10vh 20vh 10vh 70vh;
+  -ms-grid-rows: 40vh 10vh 50vh 10vh 60vh 10vh 20vh 10vh 70vh;
+  grid-template-rows: 40vh 10vh 50vh 10vh 60vh 10vh 20vh 10vh 70vh;
   font-family: "Yanone Kaffeesatz", sans-serif;
   grid-row-gap: 20px; }
 
@@ -576,7 +576,7 @@ html {
     color: green;
     margin: 0; }
   .edu__content {
-    height: 30vh; }
+    height: 50vh; }
     .edu__content--h {
       font-size: 30px; }
     .edu__content--paragraph {
