@@ -22,7 +22,7 @@ html {
 }
 
 /****** Top Video Style ******/
-.topvideowrapper {
+.topVideoWrapper {
   height: 50vh;
   overflow: hidden;
   &__video {
@@ -33,7 +33,7 @@ html {
   }
 }
 /****** Body wrapper ******/
-.fullbodycontentwrapper {
+.fullBodyContentWrapper {
   max-width: $maxwidth;
   margin: 0 auto;
 }
@@ -70,7 +70,7 @@ html {
     margin: 0;
     padding-left: 15px;
   }
-  &__linkcontainer {
+  &__linkContainer {
     display: flex;
     width: 100px;
     justify-content: space-around;
@@ -89,7 +89,7 @@ html {
 }
 
 /****** Main section container ******/
-.maincontent {
+.mainContent {
   display: grid;
   grid-template-columns: 100%;
   grid-template-rows: 40vh 10vh 50vh 10vh 60vh 10vh 20vh 10vh 70vh;
@@ -108,7 +108,7 @@ html {
 }
 
 /****** About Me section ******/
-.aboutme {
+.aboutMe {
   display: grid;
   grid-template-columns: 1fr 1fr;
   grid-column-gap: 10px;
@@ -161,15 +161,15 @@ html {
   &__item {
     width: 100%;
   }
-  &__posleft {
+  &__posLeft {
     display: flex;
     justify-content: flex-start;
   }
-  &__poscenter {
+  &__posCenter {
     display: flex;
     justify-content: center;
   }
-  &__posright {
+  &__posRight {
     display: flex;
     justify-content: flex-end;
   }
@@ -236,7 +236,7 @@ html {
 }
 
 /****** Footer section ******/
-.mainfooter {
+.mainFooter {
   width: 100%;
   padding-bottom: 50px;
   display: flex;
