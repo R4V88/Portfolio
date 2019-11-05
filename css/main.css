@@ -330,10 +330,10 @@ html {
           box-sizing: inherit; }
 
 /****** Top Video Style ******/
-.topwrapper {
+.topvideowrapper {
   height: 50vh;
   overflow: hidden; }
-  .topwrapper__video {
+  .topvideowrapper__video {
     position: relative;
     top: 50%;
     -webkit-transform: translateY(-50%);
@@ -341,7 +341,8 @@ html {
             transform: translateY(-50%);
     width: 100vw; }
 
-.contentwrapper {
+/****** Body wrapper ******/
+.fullbodycontentwrapper {
   max-width: 1000px;
   margin: 0 auto; }
 
@@ -376,12 +377,6 @@ html {
     -webkit-box-pack: start;
         -ms-flex-pack: start;
             justify-content: flex-start; }
-    .navigation__title--paragraph {
-      font-family: "Montserrat", sans-serif;
-      font-weight: normal;
-      font-size: 20px;
-      margin: 0;
-      padding-left: 15px; }
   .navigation__logo {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -390,27 +385,34 @@ html {
         -ms-flex-pack: end;
             justify-content: flex-end;
     width: 100%; }
-    .navigation__logo__container {
-      display: -webkit-box;
-      display: -ms-flexbox;
-      display: flex;
-      width: 100px;
-      -ms-flex-pack: distribute;
-          justify-content: space-around;
-      margin-right: 15px; }
-      .navigation__logo__container--mini {
-        -webkit-box-sizing: border-box;
-                box-sizing: border-box;
-        padding: 5px 5px;
-        height: 100%;
-        opacity: 0.9;
-        -webkit-transition: opacity 0.3s ease-in;
-        -o-transition: opacity 0.3s ease-in;
-        transition: opacity 0.3s ease-in; }
-        .navigation__logo__container--mini:hover {
-          opacity: 1;
-          border: 0.5px solid green; }
+  .navigation__paragraph {
+    font-family: "Montserrat", sans-serif;
+    font-weight: normal;
+    font-size: 20px;
+    margin: 0;
+    padding-left: 15px; }
+  .navigation__linkcontainer {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    width: 100px;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+    margin-right: 15px; }
+  .navigation__link {
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+    padding: 5px 5px;
+    height: 100%;
+    opacity: 0.9;
+    -webkit-transition: opacity 0.3s ease-in;
+    -o-transition: opacity 0.3s ease-in;
+    transition: opacity 0.3s ease-in; }
+    .navigation__link:hover {
+      opacity: 1;
+      border: 0.5px solid green; }
 
+/****** Main section container ******/
 .maincontent {
   display: -ms-grid;
   display: grid;
@@ -421,6 +423,7 @@ html {
   font-family: "Yanone Kaffeesatz", sans-serif;
   grid-row-gap: 20px; }
 
+/****** Down arrows ******/
 .scroll {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -435,6 +438,7 @@ html {
     height: 50px;
     width: 80px; }
 
+/****** About Me section ******/
 .aboutme {
   display: -ms-grid;
   display: grid;
@@ -454,15 +458,6 @@ html {
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center; }
-    .aboutme__container--photo {
-      background-color: #f4d03f;
-      background-image: -o-linear-gradient(318deg, #f4d03f 0%, #16a085 100%);
-      background-image: linear-gradient(132deg, #f4d03f 0%, #16a085 100%);
-      width: 200px;
-      height: 250px;
-      border-radius: 100px;
-      -webkit-animation: picturechange 3s ease-in;
-              animation: picturechange 3s ease-in; }
   .aboutme__content {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -477,27 +472,24 @@ html {
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column; }
-    .aboutme__content--h {
-      color: green;
-      letter-spacing: 2px; }
-    .aboutme__content--p {
-      font-weight: bold;
-      font-size: 24px;
-      letter-spacing: 2px; }
+  .aboutme__photo {
+    background-color: #f4d03f;
+    background-image: -o-linear-gradient(318deg, #f4d03f 0%, #16a085 100%);
+    background-image: linear-gradient(132deg, #f4d03f 0%, #16a085 100%);
+    width: 200px;
+    height: 250px;
+    border-radius: 100px;
+    -webkit-animation: picturechange 3s ease-in;
+            animation: picturechange 3s ease-in; }
+  .aboutme__title {
+    color: green;
+    letter-spacing: 2px; }
+  .aboutme__text {
+    font-weight: bold;
+    font-size: 24px;
+    letter-spacing: 2px; }
 
-.techlogo {
-  height: 50px;
-  width: 60px;
-  -webkit-transition: -webkit-transform 0.3s linear;
-  transition: -webkit-transform 0.3s linear;
-  -o-transition: transform 0.3s linear;
-  transition: transform 0.3s linear;
-  transition: transform 0.3s linear, -webkit-transform 0.3s linear; }
-  .techlogo:hover {
-    -webkit-transform: rotate(16deg) scale(2);
-        -ms-transform: rotate(16deg) scale(2);
-            transform: rotate(16deg) scale(2); }
-
+/****** Technologies section ******/
 .tech {
   display: -ms-grid;
   display: grid;
@@ -519,41 +511,53 @@ html {
     letter-spacing: 5px;
     color: green;
     margin: 0; }
-
-.techgrid {
-  display: -ms-grid;
-  display: grid;
-  width: 100%;
-  -ms-grid-columns: (1fr)[5];
-  grid-template-columns: repeat(5, 1fr);
-  -ms-grid-rows: (1fr)[5];
-  grid-template-rows: repeat(5, 1fr);
-  grid-column-gap: 10px;
-  grid-row-gap: 10px; }
-  .techgrid__item {
+  .tech__grid {
+    display: -ms-grid;
+    display: grid;
+    width: 100%;
+    -ms-grid-columns: (1fr)[5];
+    grid-template-columns: repeat(5, 1fr);
+    -ms-grid-rows: (1fr)[5];
+    grid-template-rows: repeat(5, 1fr);
+    grid-column-gap: 10px;
+    grid-row-gap: 10px; }
+  .tech__item {
     width: 100%; }
-  .techgrid__posleft {
+  .tech__posleft {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
     -webkit-box-pack: start;
         -ms-flex-pack: start;
             justify-content: flex-start; }
-  .techgrid__poscenter {
+  .tech__poscenter {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
     -webkit-box-pack: center;
         -ms-flex-pack: center;
             justify-content: center; }
-  .techgrid__posright {
+  .tech__posright {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
     -webkit-box-pack: end;
         -ms-flex-pack: end;
             justify-content: flex-end; }
+  .tech__logo {
+    height: 50px;
+    width: 60px;
+    -webkit-transition: -webkit-transform 0.3s linear;
+    transition: -webkit-transform 0.3s linear;
+    -o-transition: transform 0.3s linear;
+    transition: transform 0.3s linear;
+    transition: transform 0.3s linear, -webkit-transform 0.3s linear; }
+    .tech__logo:hover {
+      -webkit-transform: rotate(16deg) scale(2);
+          -ms-transform: rotate(16deg) scale(2);
+              transform: rotate(16deg) scale(2); }
 
+/****** Education section ******/
 .edu {
   display: -ms-grid;
   display: grid;
@@ -577,23 +581,24 @@ html {
     margin: 0; }
   .edu__content {
     height: 50vh; }
-    .edu__content--h {
-      font-size: 30px; }
-    .edu__content--paragraph {
-      margin: 0;
-      width: 100%;
-      display: -webkit-box;
-      display: -ms-flexbox;
-      display: flex;
-      -webkit-box-align: center;
-          -ms-flex-align: center;
-              align-items: center;
-      font-size: 24px;
-      -webkit-box-pack: start;
-          -ms-flex-pack: start;
-              justify-content: flex-start;
-      padding-bottom: 20px; }
+  .edu__header {
+    font-size: 30px; }
+  .edu__paragraph {
+    margin: 0;
+    width: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    font-size: 24px;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+    padding-bottom: 20px; }
 
+/****** Experience section ******/
 .exp {
   display: -ms-grid;
   display: grid;
@@ -615,24 +620,25 @@ html {
     letter-spacing: 5px;
     color: green;
     margin: 0; }
-  .exp__content {
+  .exp__article {
     height: 30vh; }
-    .exp__content--h {
-      font-size: 30px; }
-    .exp__content--paragraph {
-      margin: 0;
-      width: 100%;
-      display: -webkit-box;
-      display: -ms-flexbox;
-      display: flex;
-      -webkit-box-align: center;
-          -ms-flex-align: center;
-              align-items: center;
-      font-size: 24px;
-      -webkit-box-pack: start;
-          -ms-flex-pack: start;
-              justify-content: flex-start; }
+  .exp__header {
+    font-size: 30px; }
+  .exp__paragraph {
+    margin: 0;
+    width: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    font-size: 24px;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start; }
 
+/****** Projects section ******/
 .projects {
   display: -ms-grid;
   display: grid;
@@ -654,11 +660,8 @@ html {
     letter-spacing: 5px;
     color: green;
     margin: 0; }
-  .projects__content {
-    height: 30vh; }
-    .projects__content--h {
-      font-size: 30px; }
 
+/****** Footer section ******/
 .mainfooter {
   width: 100%;
   padding-bottom: 50px;
