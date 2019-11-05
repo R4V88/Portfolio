@@ -22,7 +22,7 @@ html {
 }
 
 /****** Top Video Style ******/
-.topwrapper {
+.topvideowrapper {
   height: 50vh;
   overflow: hidden;
   &__video {
@@ -32,8 +32,8 @@ html {
     width: 100vw;
   }
 }
-
-.contentwrapper {
+/****** Body wrapper ******/
+.fullbodycontentwrapper {
   max-width: $maxwidth;
   margin: 0 auto;
 }
@@ -57,37 +57,38 @@ html {
     display: flex;
     align-items: center;
     justify-content: flex-start;
-    &--paragraph {
-      font-family: $navigationfont;
-      font-weight: normal;
-      font-size: 20px;
-      margin: 0;
-      padding-left: 15px;
-    }
   }
   &__logo {
     display: flex;
     justify-content: flex-end;
     width: 100%;
-    &__container {
-      display: flex;
-      width: 100px;
-      justify-content: space-around;
-      margin-right: 15px;
-      &--mini {
-        box-sizing: border-box;
-        @include navlogosize;
-        opacity: 0.9;
-        transition: opacity 0.3s ease-in;
-        &:hover {
-          opacity: 1;
-          border: 0.5px solid green;
-        }
-      }
+  }
+  &__paragraph {
+    font-family: $navigationfont;
+    font-weight: normal;
+    font-size: 20px;
+    margin: 0;
+    padding-left: 15px;
+  }
+  &__linkcontainer {
+    display: flex;
+    width: 100px;
+    justify-content: space-around;
+    margin-right: 15px;
+  }
+  &__link {
+    box-sizing: border-box;
+    @include navlogosize;
+    opacity: 0.9;
+    transition: opacity 0.3s ease-in;
+    &:hover {
+      opacity: 1;
+      border: 0.5px solid green;
     }
   }
 }
 
+/****** Main section container ******/
 .maincontent {
   display: grid;
   grid-template-columns: 100%;
@@ -96,6 +97,7 @@ html {
   grid-row-gap: 20px;
 }
 
+/****** Down arrows ******/
 .scroll {
   display: flex;
   justify-content: center;
@@ -105,6 +107,7 @@ html {
   }
 }
 
+/****** About Me section ******/
 .aboutme {
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -115,54 +118,46 @@ html {
     display: flex;
     justify-content: center;
     align-items: center;
-    &--photo {
-      background-color: $photobackground;
-      background-image: $photoimage;
-      width: 200px;
-      height: 250px;
-      border-radius: 100px;
-      animation: picturechange 3s ease-in;
-    }
   }
   &__content {
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    &--h {
-      color: $justgreen;
-      letter-spacing: 2px;
-    }
-    &--p {
-      font-weight: bold;
-      font-size: 24px;
-      letter-spacing: 2px;
-    }
+  }
+  &__photo {
+    background-color: $photobackground;
+    background-image: $photoimage;
+    width: 200px;
+    height: 250px;
+    border-radius: 100px;
+    animation: picturechange 3s ease-in;
+  }
+  &__title {
+    color: $justgreen;
+    letter-spacing: 2px;
+  }
+  &__text {
+    font-weight: bold;
+    font-size: 24px;
+    letter-spacing: 2px;
   }
 }
 
-.techlogo {
-  @include logosize;
-  transition: transform 0.3s linear;
-  &:hover {
-    transform: rotate(16deg) scale(2);
-  }
-}
-
+/****** Technologies section ******/
 .tech {
   @include sectiongrid;
   &__name {
     @include sectionname;
   }
-}
-
-.techgrid {
-  display: grid;
-  width: 100%;
-  grid-template-columns: repeat(5, 1fr);
-  grid-template-rows: repeat(5, 1fr);
-  grid-column-gap: 10px;
-  grid-row-gap: 10px;
+  &__grid {
+    display: grid;
+    width: 100%;
+    grid-template-columns: repeat(5, 1fr);
+    grid-template-rows: repeat(5, 1fr);
+    grid-column-gap: 10px;
+    grid-row-gap: 10px;
+  }
   &__item {
     width: 100%;
   }
@@ -178,8 +173,16 @@ html {
     display: flex;
     justify-content: flex-end;
   }
+  &__logo {
+    @include logosize;
+    transition: transform 0.3s linear;
+    &:hover {
+      transform: rotate(16deg) scale(2);
+    }
+  }
 }
 
+/****** Education section ******/
 .edu {
   @include sectiongrid;
   &__name {
@@ -187,54 +190,52 @@ html {
   }
   &__content {
     height: 50vh;
-    &--h {
-      font-size: 30px;
-    }
-    &--paragraph {
-      margin: 0;
-      width: 100%;
-      display: flex;
-      align-items: center;
-      font-size: 24px;
-      justify-content: flex-start;
-      padding-bottom: 20px;
-    }
+  }
+  &__header {
+    font-size: 30px;
+  }
+  &__paragraph {
+    margin: 0;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    font-size: 24px;
+    justify-content: flex-start;
+    padding-bottom: 20px;
   }
 }
 
+/****** Experience section ******/
 .exp {
   @include sectiongrid;
   &__name {
     @include sectionname;
   }
-  &__content {
+  &__article {
     height: 30vh;
-    &--h {
-      font-size: 30px;
-    }
-    &--paragraph {
-      margin: 0;
-      width: 100%;
-      display: flex;
-      align-items: center;
-      font-size: 24px;
-      justify-content: flex-start;
-    }
+  }
+  &__header {
+    font-size: 30px;
+  }
+  &__paragraph {
+    margin: 0;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    font-size: 24px;
+    justify-content: flex-start;
   }
 }
 
+/****** Projects section ******/
 .projects {
   @include sectiongrid;
   &__name {
     @include sectionname;
   }
-  &__content {
-    height: 30vh;
-    &--h {
-      font-size: 30px;
-    }
-  }
 }
+
+/****** Footer section ******/
 .mainfooter {
   width: 100%;
   padding-bottom: 50px;
