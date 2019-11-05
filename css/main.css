@@ -330,10 +330,10 @@ html {
           box-sizing: inherit; }
 
 /****** Top Video Style ******/
-.topvideowrapper {
+.topVideoWrapper {
   height: 50vh;
   overflow: hidden; }
-  .topvideowrapper__video {
+  .topVideoWrapper__video {
     position: relative;
     top: 50%;
     -webkit-transform: translateY(-50%);
@@ -342,7 +342,7 @@ html {
     width: 100vw; }
 
 /****** Body wrapper ******/
-.fullbodycontentwrapper {
+.fullBodyContentWrapper {
   max-width: 1000px;
   margin: 0 auto; }
 
@@ -391,7 +391,7 @@ html {
     font-size: 20px;
     margin: 0;
     padding-left: 15px; }
-  .navigation__linkcontainer {
+  .navigation__linkContainer {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -413,7 +413,7 @@ html {
       border: 0.5px solid green; }
 
 /****** Main section container ******/
-.maincontent {
+.mainContent {
   display: -ms-grid;
   display: grid;
   -ms-grid-columns: 100%;
@@ -439,7 +439,7 @@ html {
     width: 80px; }
 
 /****** About Me section ******/
-.aboutme {
+.aboutMe {
   display: -ms-grid;
   display: grid;
   -ms-grid-columns: 1fr 1fr;
@@ -448,7 +448,7 @@ html {
   -ms-grid-rows: 50vh;
   grid-template-rows: 50vh;
   height: 100%; }
-  .aboutme__container {
+  .aboutMe__container {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -458,7 +458,7 @@ html {
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center; }
-  .aboutme__content {
+  .aboutMe__content {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -472,7 +472,7 @@ html {
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column; }
-  .aboutme__photo {
+  .aboutMe__photo {
     background-color: #f4d03f;
     background-image: -o-linear-gradient(318deg, #f4d03f 0%, #16a085 100%);
     background-image: linear-gradient(132deg, #f4d03f 0%, #16a085 100%);
@@ -481,10 +481,10 @@ html {
     border-radius: 100px;
     -webkit-animation: picturechange 3s ease-in;
             animation: picturechange 3s ease-in; }
-  .aboutme__title {
+  .aboutMe__title {
     color: green;
     letter-spacing: 2px; }
-  .aboutme__text {
+  .aboutMe__text {
     font-weight: bold;
     font-size: 24px;
     letter-spacing: 2px; }
@@ -523,21 +523,21 @@ html {
     grid-row-gap: 10px; }
   .tech__item {
     width: 100%; }
-  .tech__posleft {
+  .tech__posLeft {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
     -webkit-box-pack: start;
         -ms-flex-pack: start;
             justify-content: flex-start; }
-  .tech__poscenter {
+  .tech__posCenter {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
     -webkit-box-pack: center;
         -ms-flex-pack: center;
             justify-content: center; }
-  .tech__posright {
+  .tech__posRight {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -662,7 +662,7 @@ html {
     margin: 0; }
 
 /****** Footer section ******/
-.mainfooter {
+.mainFooter {
   width: 100%;
   padding-bottom: 50px;
   display: -webkit-box;
